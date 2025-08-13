@@ -84,6 +84,9 @@ export default function App() {
     setLoading(false);
   };
 
+
+
+  
   const addTodo = async () => {
     const todoText = newTodo.trim();
     if (!todoText) return;

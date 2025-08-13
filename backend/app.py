@@ -7,7 +7,7 @@ from datetime import datetime
 app = Flask(__name__)
 
 # Enable CORS for local development
-CORS(app, origins=["http://localhost:3000"])
+# CORS(app, origins=["http://localhost:3000"])
 
 # In-memory storage (in production, use a database)
 todos = []
@@ -189,25 +189,18 @@ if __name__ == '__main__':
     # Initialize sample data
     init_sample_data()
     
-    # Configuration for local development
-    port = int(os.environ.get('PORT', 5000))
-    debug_mode = os.environ.get('FLASK_DEBUG', 'True').lower() == 'true'
+    # # Configuration for local development
+    # port = int(os.environ.get('PORT', 5000))
+    # debug_mode = os.environ.get('FLASK_DEBUG', 'True').lower() == 'true'
     
-    print("="*50)
-    print("🚀 Starting Flask Backend Server")
-    print("="*50)
-    print(f"Environment: Development")
-    print(f"Port: {port}")
-    print(f"Debug Mode: {debug_mode}")
-    print(f"Frontend URL: http://localhost:3000")
-    print(f"Backend URL: http://localhost:{port}")
-    print(f"API Base: http://localhost:{port}/api")
-    print("="*50)
+    # print("="*50)
+    # print("🚀 Starting Flask Backend Server")
+    # print("="*50)
+    # print(f"Environment: Development")
+    # print(f"Port: {port}")
+    # print(f"Debug Mode: {debug_mode}")
+    # print(f"Frontend URL: http://localhost:3000")
+    # print(f"Backend URL: http://localhost:{port}")
+    # print(f"API Base: http://localhost:{port}/api")
+    # print("="*50)
     
-    # Start the Flask development server
-    app.run(
-        host='127.0.0.1',  # localhost only for security
-        port=port,
-        debug=debug_mode,
-        threaded=True
-    )
